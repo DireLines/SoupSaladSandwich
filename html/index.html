@@ -1,79 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-<script src='https://code.jquery.com/ui/1.11.4/jquery-ui.js'></script>
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-
 <head>
-    <style>
-        div {
-            background-color: #E6E6E6;
-            border-radius: 4px;
-        }
+    <link rel='stylesheet' type='text/css' href='/css/main.css'>
 
-        .titlebar{
-            width: 100%;
-            height: 10%;
-            opacity: 0.8;
-            display: inline-block;
-        }
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+    <script src='https://code.jquery.com/ui/1.11.4/jquery-ui.js'></script>
+    <script src='http://code.jquery.com/jquery-1.10.2.js'></script>
 
-        .food{
-            width: 100%;
-            height: 60%;
-            display: inline-block;
-        }
-
-        .button{
-            position: absolute;
-            width:33.3333%;
-            opacity: 0.7;
-            height: 15%;
-            border-radius: 5px;
-        }
-        h1{
-            height: 100%;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 80px;
-            font-family: "Impact";
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        h2{
-            height: 100%;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 80px;
-            font-family: "Impact";
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        .historical{
-            border-radius: 20px;
-            display: inline-block;
-        }
-    </style>
-    <script>
-    $(document).ready(function(){
-        $('.button').mouseenter(function(){
-            $(this).fadeTo(50,1);
-        });
-        $('.button').mouseleave(function(){
-            $(this).fadeTo(100,0.7);
-        });
-        $('.year').click(function(){
-
-        });
-    });
-    </script>
-
-    <script src='/js/ajax.js'>
-    </script>
+    <script src='/js/main.js'></script>
+    <script src='/js/ajax.js'></script>
 </head>
 
 
@@ -86,20 +22,22 @@
     <div class = 'food'>
         <h1>HOTDOG</h1>
     </div>
-    <div class = 'button' style = 'left:0;'>
-        <h1>
-            SOUP
-        </h1>
-    </div>
-    <div class = 'button' style = 'left:33.333%;'>
-        <h1>
-            SALAD
-        </h1>
-    </div>
-    <div class = 'button' style = 'right:0;'>
-        <h1>
-            SANDWICH
-        </h1>
+    <div class='votes-holder'>
+      <div class = 'button' style = 'left:0;'>
+          <h1>
+              SOUP
+          </h1>
+      </div>
+      <div class = 'button' style = 'left:33.333%;'>
+          <h1>
+              SALAD
+          </h1>
+      </div>
+      <div class = 'button' style = 'right:0;'>
+          <h1>
+              SANDWICH
+          </h1>
+      </div>
     </div>
 </body>
 </html>

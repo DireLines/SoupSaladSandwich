@@ -19,6 +19,7 @@ var path = require('path');
 var htmldir = __dirname + "/html/";
 var jsdir = __dirname + "/js/";
 var cssdir = __dirname + "/css/";
+var imgdir = __dirname + "/img/";
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
@@ -61,6 +62,8 @@ app.post('/test', function(req, res) {
 app.use('/js/', express.static(jsdir));
 
 app.use('/css/', express.static(cssdir));
+
+app.use('/img/', express.static(imgdir));
 
 app.listen(80, function() {
 	console.log("Listening on port 80...");
