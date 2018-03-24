@@ -18,14 +18,15 @@ var FoodType = {
 
 function vote(uniqueid, category) {
 	var request = new XMLHttpRequest();
+	request.open('POST', '/vote');
+	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	var fd = new FormData();
-	fd.append('uniqueid', foodid);
+	fd.append('uniqueid', uniqueid);
 	fd.append('category', category);
 	request.onreadystatechange = function() {
-		if(request.readystate == 4 && request.status == 200) {
-			//Handle any feedback from server here.
+		if(request.readyState == 4 && request.status == 200) {
+			alert(request.responseText);
 		}
 	}
-	request.open('POST', '/vote');
-	request.send(fd);
+	request.send("uniqueid=" + uniqueid + "&category=" + category);
 }
