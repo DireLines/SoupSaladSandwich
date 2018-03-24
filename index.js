@@ -9,6 +9,7 @@ var path = require('path');
 //Define a certain path.
 var htmldir = __dirname + "/html/";
 var jsdir = __dirname + "/js/";
+var cssdir = __dirname + "/css/";
 
 //This handles requests to the main site. If you want to change which file gets served, or make content at runtime, change here
 app.get('/', function(req, res) {
@@ -25,6 +26,8 @@ app.post('/vote', function(req, res) {
 });
 
 app.use('/js/', express.static(jsdir));
+
+app.use('/css/', express.static(cssdir));
 
 app.listen(80, function() {
 	console.log("Listening on port 80...");
