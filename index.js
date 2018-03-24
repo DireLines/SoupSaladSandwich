@@ -29,22 +29,28 @@ app.get('/', function(req, res) {
 });
 
 app.get('/getfoods', function(req, res) {
-	//connection.connect(function(err) {
-	//	if (err) throw err;
-	//	console.log("Connected!");
-
-		connection.query(
-			'SELECT name FROM objects order by RAND() limit 5',
-			function(err, results, fields) {
-				console.log(results);
-			}
-		);
-	//});
+	connection.query(
+		'SELECT name FROM objects order by RAND() limit 5',
+		function(err, results, fields) {
+			console.log(results);
+		}
+	);
 	res.send('Foods are get.');
 });
 
 app.post('/vote', function(req, res) {
 	console.log(req.body);
+	var category = reg.body.category;
+	var food = reg.body.uniqueid;
+	var cookie = 1; // MAKE THIS MAKE SENSE
+	connection.query(
+		'INSERT INTO votes (object_id, user_id, category_id) values (?,?,?) ' +
+		'WHERE NOT EXISTS (SELECT * FROM votes WHERE object_id = ? AND user_id = ?)',
+		[food, cookie, category, food, cookie],
+		function(err, results, fields) {
+			console.log(results);
+		}
+	);
 	res.send('Thanks for voting!');
 });
 
