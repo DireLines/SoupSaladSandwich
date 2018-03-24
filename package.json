@@ -1,0 +1,24 @@
+{
+	"name": "soup-salad-sandwich",
+	"version": "0.0.0",
+	"description": "A website for democratically classifying foods",
+	"main": "index.js",
+	"contributors": [
+		{
+			"name": "Jack Herd"
+		},
+		{
+			"name": "Nathaniel Saxe"
+		},
+		{
+			"name": "Quintin DeGroot"
+		},
+		{
+			"name": "Ryan Khan"
+		}
+	],
+	"dependencies": {
+		"express": "^4.16.3",
+		"path": "^0.12.7"
+	}
+}
