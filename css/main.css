@@ -38,7 +38,8 @@ div {
 .button{
 		position: absolute;
 		width:calc(33.3333% - 2px);
-		border: 1px solid #6E6E6E;
+		border-left: 1px solid #6E6E6E;
+		border-right: 1px solid #6E6E6E;
 		height: 100%;
 		opacity: 0.7;
 		transition: opacity 0.5s;
