@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 	host	: 'localhost',
 	user	: 'siteUser',
 	password: 'soupD00p',
-	database: 'SoupSaladSandwich'
+	database: 'SSS'
 });
 
 //Import path so we can serve local files
