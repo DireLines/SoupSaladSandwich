@@ -26,29 +26,17 @@
             display: inline-block;
         }
 
-        .soupbutton{
-            width:33%;
-            opacity: 0.8;
+        .button{
+            position: absolute;
+            width:33.3333%;
+            opacity: 0.7;
             height: 15%;
             border-radius: 5px;
-            display: inline-block;
         }
-        .saladbutton{
-            width:33%;
-            opacity: 0.8;
-            height: 15%;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        .sandwichbutton{
-            width:33%;
-            opacity: 0.8;
-            height: 15%;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
         h1{
+            height: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
             font-size: 80px;
             font-family: "Impact";
             text-align: center;
@@ -56,9 +44,12 @@
         }
 
         h2{
-            font-size: 40px;
+            height: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 80px;
             font-family: "Impact";
-            text-align: left;
+            text-align: center;
             vertical-align: middle;
         }
 
@@ -68,6 +59,17 @@
         }
     </style>
     <script>
+    $(document).ready(function(){
+        $('.button').mouseenter(function(){
+            $(this).fadeTo(50,1);
+        });
+        $('.button').mouseleave(function(){
+            $(this).fadeTo(100,0.7);
+        });
+        $('.year').click(function(){
+            
+        });
+    });
     </script>
 </head>
 
@@ -81,17 +83,17 @@
     <div class = 'food'>
         <h1>HOTDOG</h1>
     </div>
-    <div class = 'soupbutton'>
+    <div class = 'button' style = 'left:0;'>
         <h1>
             SOUP
         </h1>
     </div>
-    <div class = 'saladbutton'>
+    <div class = 'button' style = 'left:33.333%;'>
         <h1>
             SALAD
         </h1>
     </div>
-    <div class = 'sandwichbutton'>
+    <div class = 'button' style = 'right:0;'>
         <h1>
             SANDWICH
         </h1>
