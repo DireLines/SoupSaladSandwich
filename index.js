@@ -3,6 +3,15 @@
 var express = require('express');
 var app = express();
 
+// Import mysql -- for the db interaction
+var mysql = require('mysql');
+// Sets up the connection to the db
+var connection = mysql.createConnection({
+	host	: 'localhost',
+	user	: 'siteUser',
+	password: 'soupD00p',
+	database: 'SoupSaladSandwich'
+});
 
 //Import path so we can serve local files
 var path = require('path');
