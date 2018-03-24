@@ -20,6 +20,9 @@ var htmldir = __dirname + "/html/";
 var jsdir = __dirname + "/js/";
 var cssdir = __dirname + "/css/";
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended:false}));
+
 //This handles requests to the main site. If you want to change which file gets served, or make content at runtime, change here
 app.get('/', function(req, res) {
 	res.sendFile(path.join(htmldir + "index.html"));
@@ -29,7 +32,7 @@ app.get('/getfoods', function(req, res) {
 	//connection.connect(function(err) {
 	//	if (err) throw err;
 	//	console.log("Connected!");
-	
+
 		connection.query(
 			'SELECT name FROM objects order by RAND() limit 5',
 			function(err, results, fields) {
@@ -41,11 +44,12 @@ app.get('/getfoods', function(req, res) {
 });
 
 app.post('/vote', function(req, res) {
+	console.log(req.body);
 	res.send('Thanks for voting!');
 });
 
 app.post('/test', function(req, res) {
-	
+
 });
 
 app.use('/js/', express.static(jsdir));
