@@ -26,7 +26,7 @@ function vote(uniqueid, category) {
 	fd.append('category', category);
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200) {
-			alert(request.responseText);
+			changeResultHTML(request.responseText);
 		}
 	}
 	request.send("uniqueid=" + uniqueid + "&category=" + category);

@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('.results').css('display','none');
 	getfoods();
 });
-
+var numVoted = 0;
 //gets called once list of 5 random foods is recieved from database
 function generateHTML(data) {
 	//set food text
@@ -13,7 +13,6 @@ function generateHTML(data) {
 	$('.food').css('background-image','url("' + parsedFoods.response[0].path + '")');
 	//assign vote functions to buttons
 	var foodnum = parsedFoods.response[0].object_id;
-	var numVoted = 0;
 	$('.button').click(function(){
 		console.log("voting on thing!");
 		var category = 0;
@@ -43,4 +42,9 @@ function generateHTML(data) {
 function goToResults(){
 	$('.quiz').css('display','none');
 	$('.results').css('display','block');
+}
+
+function changeResultHTML(data){
+	parsedVotes = JSON.parse(data);
+	$('#r' +(numVoted)).text("Soup: " + parsedVotes.soupVote + "\n" + "Salad: " + parsedVotes.saladVote + "\n" + "Sandwich: " + parsedVotes.sandwichVote + "\n");
 }
