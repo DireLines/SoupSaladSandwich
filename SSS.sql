@@ -77,7 +77,7 @@ VALUES
 	(10,'/img/Apple.jpg','Apple','est quam pharetra magna ac consequat metus'),
 	(11,'/img/Baked\ potato.jpg','Baked potato','est quam pharetra magna ac consequat metus'),
 	(12,'/img/Corndog.jpg','Corndog','est quam pharetra magna ac consequat metus'),
-	(13,'/img/Open\ Faced\ Sandwich.jpg','Open-Faced Sandwich','est quam pharetra magna ac consequat metus'),
+	(13,'/img/Open\ Faced\ Sandwich.png','Open-Faced Sandwich','est quam pharetra magna ac consequat metus'),
 	(14,'/img/Sliced\ bread.jpg','Sliced Bread','est quam pharetra magna ac consequat metus'),
 	(15,'/img/Poptarts.jpg','Poptarts','est quam pharetra magna ac consequat metus');
 
