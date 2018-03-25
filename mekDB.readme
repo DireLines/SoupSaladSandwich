@@ -1,4 +1,5 @@
-1. install mysql
+1. brew install mysql
+   brew services start mysql
 2. mysql -u root , enter your passwd
 3. GRANT ALL PRIVILEGES ON *.* TO 'siteUser'@'localhost' IDENTIFIED BY 'soupD00p';
 4. \q
