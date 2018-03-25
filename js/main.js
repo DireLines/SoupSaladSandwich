@@ -15,6 +15,16 @@ function generateHTML(data) {
 	var numVoted = 0;
 	$('.button').click(function(){
 		console.log("voting on thing!");
+		var category = 0;
+		var id = this.id;
+		if(id === 'soupbutton'){
+			category = 0;
+		}else if(id === 'saladbutton'){
+			category = 1;
+		} else{
+			category = 2;
+		}
+		console.log(foodnum, category);
 		// vote(foodnum,category);
 		numVoted++;
 		if(numVoted > 5){
