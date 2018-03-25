@@ -69,7 +69,32 @@ app.post('/vote', function(req, res) {
 			// console.log(results);
 		}
 	);
-	res.send('Thanks for voting!');
+	var voteCounts = '{"soupVote":';
+	connection.query(
+		'select count(vote_id) from votes where object_id = ? and category_id = 0',
+		[food],
+		function(err, results, fields) {
+			console.log(results);
+			var x = JSON.parse(results);
+			voteCounts += x.count(vote_id) + ',"saladVote":';
+		}
+	);
+	connection.query(
+		'select count(vote_id) from votes where object_id = ? and category_id = 1',
+		[food],
+		function(err, results, fields) {
+			voteCounts += results.count(vote_id) + ',"sandwichVote":';
+		}
+	);
+	connection.query(
+		'select count(vote_id) from votes where object_id = ? and category_id = 2',
+		[food],
+		function(err, results, fields) {
+			voteCounts += results.count(vote_id) + '}';
+		}
+	);
+	console.log(voteCounts);
+	//res.send('Thanks for voting!');
 });
 
 app.post('/test', function(req, res) {
