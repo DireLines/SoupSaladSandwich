@@ -22,7 +22,7 @@ div {
 		height: 100%;
 		display: block;
 		z-index: -1;
-		/*background-image: url("/img/Hot Dog.jpg");*/
+		background-image: url("/img/Breadbowl.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 }
@@ -72,6 +72,7 @@ h1{
 	left: 0;
 	width: 100%;
 	background-color: rgba(230, 230, 230, 0);
+	text-shadow: 4px 4px #000000;
 }
 
 

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	getfoods();
 		/*$('.button').mouseenter(function(){
 				$(this).fadeTo(50,1);
 		});
