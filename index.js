@@ -63,8 +63,8 @@ app.post('/vote', function(req, res) {
 	var cookie = 1; // MAKE THIS MAKE SENSE
 	var q1d = false, q2d = false, q3d = false, q4d = false;
 	connection.query(
-		'INSERT INTO votes (object_id, user_id, category_id) values (?,?,?) ' +
-		'WHERE NOT EXISTS (SELECT * FROM votes WHERE object_id = ? AND user_id = ?)',
+		'INSERT INTO votes (object_id, user_id, category_id) values (?,?,?) ',// +
+		//'WHERE NOT EXISTS (SELECT * FROM votes WHERE object_id = ? AND user_id = ?)',
 		[food, cookie, category, food, cookie],
 		function(err, results, fields) {
 			q1d = true;
