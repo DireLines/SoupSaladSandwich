@@ -73,12 +73,12 @@ VALUES
 	(6,'/img/Burger\ with\ Potato Salad.jpeg','Burger with fries','nulla mollis molestie lorem quisque'),
 	(7,'/img/Gourmet\ Salad.jpg','Just a buncha food','potenti cras in purus eu magna vulputate luctus cum'),
 	(8,'/img/Hard Wrap\ Sandwich.jpeg','eggrolls','in imperdiet et commodo vulputate justo in'),
-	(9,'/img/Ice\ Cream\ Sandwich.jpg','ice cream sandwich','est quam pharetra magna ac consequat metus');
-	(10,'/img/Apple.jpg','Apple','est quam pharetra magna ac consequat metus');
-	(11,'/img/Baked\ potato.jpg','Baked potato','est quam pharetra magna ac consequat metus');
-	(12,'/img/Corndog.jpg','Corndog','est quam pharetra magna ac consequat metus');
-	(13,'/img/Open\ Faced\ Sandwich.jpg','Open-Faced Sandwich','est quam pharetra magna ac consequat metus');
-	(14,'/img/Sliced\ bread.jpg','Sliced Bread','est quam pharetra magna ac consequat metus');
+	(9,'/img/Ice\ Cream\ Sandwich.jpg','ice cream sandwich','est quam pharetra magna ac consequat metus'),
+	(10,'/img/Apple.jpg','Apple','est quam pharetra magna ac consequat metus'),
+	(11,'/img/Baked\ potato.jpg','Baked potato','est quam pharetra magna ac consequat metus'),
+	(12,'/img/Corndog.jpg','Corndog','est quam pharetra magna ac consequat metus'),
+	(13,'/img/Open\ Faced\ Sandwich.jpg','Open-Faced Sandwich','est quam pharetra magna ac consequat metus'),
+	(14,'/img/Sliced\ bread.jpg','Sliced Bread','est quam pharetra magna ac consequat metus'),
 	(15,'/img/Poptarts.jpg','Poptarts','est quam pharetra magna ac consequat metus');
 
 /*!40000 ALTER TABLE `objects` ENABLE KEYS */;
