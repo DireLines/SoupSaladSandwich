@@ -66,7 +66,7 @@ LOCK TABLES `objects` WRITE;
 INSERT INTO `objects` (`object_id`, `path`, `name`, `description`)
 VALUES
 	(1,'/img/Breadbowl.jpg','BREAD BOWL','euismod scelerisque quam turpis adipiscing lorem vitae'),
-	(2,'/img/Flatbread\ Sandwich.jpeg','Flatbread Sandwich','egestas metus aenean fermentum donec ut'),
+	(2,'/img/Flatbread\ Sandwich.jpeg','Flatbread sandwich','egestas metus aenean fermentum donec ut'),
 	(3,'/img/Hard\ Shell\ Sandwich.jpeg','Taco','lacus morbi sem mauris laoreet ut rhoncus'),
 	(4,'/img/Hot\ Dog.jpg','Hot Dog','lacinia eget tincidunt eget tempus vel pede morbi'),
 	(5,'/img/Symmetrical\ Salad.jpg','Fancy Fries','consequat lectus in est risus auctor sed tristique in tempus'),

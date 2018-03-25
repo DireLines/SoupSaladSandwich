@@ -3,3 +3,8 @@
 3. GRANT ALL PRIVILEGES ON *.* TO 'siteUser'@'localhost' IDENTIFIED BY 'soupD00p';
 4. \q
 5. mysql -u siteUser -p < /path/to/SSS.sql, enter soupD00p
+
+
+To change database initial values
+1. Edit SSS.sql to whatever you want to initialize with
+2. mysql -u siteUser -p < /path/to/SSS.sql, enter soupD00p (assuming you've done the list above)

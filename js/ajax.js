@@ -38,7 +38,7 @@ function getfoods() {
 	request.open('GET', '/getfoods');
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200) {
-			alert(request.responseText);
+			// alert(request.responseText);
 			generateHTML(request.responseText);
 		}
 	}
@@ -47,9 +47,9 @@ function getfoods() {
 
 function generateHTML(data) {
 	parsedFoods = JSON.parse(data);
-	$('div.food h1').text(parsedFoods.response[0].name);
+	$('div.food h1').text(parsedFoods.response[0].name.toUpperCase());
+	//change image
 	console.log(parsedFoods.response[0].path);
 	$('div.food').css('background-image',parsedFoods.response[0].path);
-	//change image
 	//assign vote functions to buttons
 }
