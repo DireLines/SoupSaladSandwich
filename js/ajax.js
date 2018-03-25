@@ -17,8 +17,25 @@ var FoodType = {
  */
 
 function vote(uniqueid, category) {
+	console.log("Called JS vote!");
 	var request = new XMLHttpRequest();
 	request.open('POST', '/vote');
+	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	var fd = new FormData();
+	fd.append('uniqueid', uniqueid);
+	fd.append('category', category);
+	request.onreadystatechange = function() {
+		if(request.readyState == 4 && request.status == 200) {
+			alert(request.responseText);
+		}
+	}
+	request.send("uniqueid=" + uniqueid + "&category=" + category);
+}
+
+function getfoods(uniqueid, category) {
+	console.log("Called JS getfoods!");
+	var request = new XMLHttpRequest();
+	request.open('GET', '/getfoods');
 	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	var fd = new FormData();
 	fd.append('uniqueid', uniqueid);

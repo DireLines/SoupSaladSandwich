@@ -21,8 +21,10 @@ div {
 		width: 100%;
 		height: 100%;
 		display: block;
-		background-color: #000000;
 		z-index: -1;
+		background-image: url("/img/Breadbowl.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
 }
 
 .votes-holder {
@@ -32,7 +34,7 @@ div {
 	width: 100%;
 	height: 130px;
 	display: block;
-	background-color: rgba(255, 255, 255, 0);
+	background-color: rgba(255,255,255, 0);
 }
 
 .button{
@@ -41,13 +43,13 @@ div {
 		border-left: 1px solid #6E6E6E;
 		border-right: 1px solid #6E6E6E;
 		height: 100%;
-		opacity: 0.7;
-		transition: opacity 0.5s;
+		background-color: rgba(230, 230, 230, 0.6);
+		transition: background-color 0.5s;
 }
 
 .button:hover {
-	opacity: 1;
-	transition: opacity 1s;
+	background-color: rgba(230, 230, 230, 1);
+	transition: background-color 1s;
 }
 h1{
 		height: 100px;
@@ -69,6 +71,8 @@ h1{
 	top: calc(50% - 50px);
 	left: 0;
 	width: 100%;
+	background-color: rgba(230, 230, 230, 0);
+	text-shadow: 4px 4px #000000;
 }
 
 
