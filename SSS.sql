@@ -73,8 +73,7 @@ VALUES
 	(6,'/img/Burger\ with\ Potato Salad.jpeg','Burger with fries','nulla mollis molestie lorem quisque'),
 	(7,'/img/Gourmet\ Salad.jpg','Just a buncha food','potenti cras in purus eu magna vulputate luctus cum'),
 	(8,'/img/Hard Wrap\ Sandwich.jpeg','eggrolls','in imperdiet et commodo vulputate justo in'),
-	(9,'/img/Ice\ Cream\ Sandwich.jpg','ice cream sandwich','est quam pharetra magna ac consequat metus'),
-	(10,'/bibendum/imperdiet/nullam/orci/pede/venenatis.png','tempor','elit ac nulla sed vel enim sit amet nunc viverra');
+	(9,'/img/Ice\ Cream\ Sandwich.jpg','ice cream sandwich','est quam pharetra magna ac consequat metus');
 
 /*!40000 ALTER TABLE `objects` ENABLE KEYS */;
 UNLOCK TABLES;

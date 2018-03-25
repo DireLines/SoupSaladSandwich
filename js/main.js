@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$('.results').css('display','none');
 	getfoods();
 });
 
@@ -25,11 +26,11 @@ function generateHTML(data) {
 			category = 2;
 		}
 		console.log(foodnum, category);
-		// vote(foodnum,category);
+		 vote(foodnum,category);
 		numVoted++;
 		if(numVoted >= 5){
 			console.log("going to results");
-			// GoToResults();
+			goToResults();
 		} else{
 			console.log("showing next food");
 			$('div.food h1').text(parsedFoods.response[numVoted].name.toUpperCase());
@@ -37,4 +38,9 @@ function generateHTML(data) {
 			foodnum = parsedFoods.response[numVoted].object_id;
 		}
 	});
+}
+
+function goToResults(){
+	$('.quiz').css('display','none');
+	$('.results').css('display','block');
 }

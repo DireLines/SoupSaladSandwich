@@ -4,7 +4,7 @@ div {
 		background-color: #E6E6E6;
 }
 
-.titlebar{
+.titlebar {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -27,7 +27,7 @@ div {
 		background-size: cover;
 }
 
-.results{
+.results {
 		position: absolute;
 		top: 25%;
 		left: 0px;
@@ -38,6 +38,34 @@ div {
 		background-repeat: no-repeat;
 		background-color: rgba(0, 0, 0, 0);
 		background-size: cover;
+}
+
+.results .res {
+	position: absolute;
+	top: 130px;
+	height: calc(100% - 130px);
+	background-color: rgba(224, 224, 224, 0.8);
+	margin: none;
+}
+
+#r1 {
+	left: 0%;
+}
+
+#r2 {
+	left: 20%;
+}
+
+#r3 {
+	left: 40%;
+}
+
+#r4 {
+	left: 60%;
+}
+
+#r5 {
+	left: 80%;
 }
 
 .votes-holder {
