@@ -56,7 +56,7 @@ app.post('/vote', function(req, res) {
 });
 
 app.post('/test', function(req, res) {
-
+	console.log("Test function working");
 });
 
 app.use('/js/', express.static(jsdir));
