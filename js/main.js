@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	getfoods(5,5);
+	getfoods();
 	var numVoted = 0;
 		$('.button').click(function(){
 			vote(1,0);

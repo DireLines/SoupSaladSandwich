@@ -32,15 +32,21 @@ function vote(uniqueid, category) {
 	request.send("uniqueid=" + uniqueid + "&category=" + category);
 }
 
-function getfoods(uniqueid, category) {
+function getfoods() {
 	console.log("Called JS getfoods!");
+	var theStuff;
 	var request = new XMLHttpRequest();
 	request.open('GET', '/getfoods');
-	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200) {
 			alert(request.responseText);
+			generateHTML(request.responseText);
 		}
 	}
 	request.send();
+}
+
+function generateHTML(data) {
+	//make background image / text
+	//assign vote functions to buttons
 }

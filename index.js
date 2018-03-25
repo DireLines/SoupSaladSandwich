@@ -34,9 +34,9 @@ app.get('/getfoods', function(req, res) {
 		'SELECT name FROM objects order by RAND() limit 5',
 		function(err, results, fields) {
 			console.log(results);
+			res.send("{'response':" + JSON.stringify(results) + "}");
 		}
 	);
-	res.send('Foods are get.');
 });
 
 app.post('/vote', function(req, res) {

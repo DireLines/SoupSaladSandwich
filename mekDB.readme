@@ -1,5 +1,5 @@
 1. install mysql
-2. mysql -u root -p, enter your passwd
+2. mysql -u root , enter your passwd
 3. GRANT ALL PRIVILEGES ON *.* TO 'siteUser'@'localhost' IDENTIFIED BY 'soupD00p';
 4. \q
 5. mysql -u siteUser -p < /path/to/SSS.sql, enter soupD00p
