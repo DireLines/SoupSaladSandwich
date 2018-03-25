@@ -44,12 +44,3 @@ function getfoods() {
 	}
 	request.send();
 }
-
-function generateHTML(data) {
-	parsedFoods = JSON.parse(data);
-	$('div.food h1').text(parsedFoods.response[0].name.toUpperCase());
-	//change image
-	console.log(parsedFoods.response[0].path);
-	$('div.food').css('background-image',parsedFoods.response[0].path);
-	//assign vote functions to buttons
-}
