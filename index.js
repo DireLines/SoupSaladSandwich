@@ -13,6 +13,10 @@ var connection = mysql.createConnection({
 	database: 'SSS'
 });
 
+//Making cookies happen
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 //Import path so we can serve local files
 var path = require('path');
 //Define a certain path.
@@ -25,6 +29,19 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 
 //This handles requests to the main site. If you want to change which file gets served, or make content at runtime, change here
+app.use(function(req, res, next) {
+	var cookie = req.cookies.sssID;
+	if (typeof cookie === 'undefined') {
+		var randomNumber=Math.random().toString();
+		randomNumber=randomNumber.substring(2,randomNumber.length);
+		res.cookie('sssID',randomNumber,{maxAge: 900000, httpOnly: true});
+		console.log('made cookie' + randomNumber);
+	} else {
+		console.log('has cookie' + cookie);
+	}
+	next();
+});
+
 app.get('/', function(req, res) {
 	res.sendFile(path.join(htmldir + "index.html"));
 });
