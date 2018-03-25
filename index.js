@@ -91,7 +91,7 @@ app.post('/vote', function(req, res) {
 		'select count(vote_id) from votes where object_id = ? and category_id = 2',
 		[food],
 		function(err, results, fields) {
-			voteCounts += results[0]['count(vote_id)'] + ',"name":';
+			voteCounts += results[0]['count(vote_id)'] + ',"name":"';
 			q4d = true;
 			console.log("did this");
 			console.log(voteCounts);
@@ -99,7 +99,7 @@ app.post('/vote', function(req, res) {
 		'select name from objects where object_id = ?',
 		[food],
 		function(err, results, fields) {
-			voteCounts += results[0]['name'] + '}';
+			voteCounts += results[0]['name'] + '"}';
 			console.log("did this");
 			res.send(voteCounts);
 		});		

@@ -46,5 +46,6 @@ function goToResults(){
 
 function changeResultHTML(data){
 	parsedVotes = JSON.parse(data);
-	$('#r' +(numVoted)).text("Soup: " + parsedVotes.soupVote + "\n" + "Salad: " + parsedVotes.saladVote + "\n" + "Sandwich: " + parsedVotes.sandwichVote + "\n");
+	var stringboy = jQuery.parseHTML("<h1>" + parsedVotes.name.toUpperCase() + "</h1>" + "<h1>Soup: " + parsedVotes.soupVote + "</h1>" + "<h1>Salad: " + parsedVotes.saladVote + "</h1>" + "<h1>Sandwich: " + parsedVotes.sandwichVote + "</h1>");
+	$('#r' +(numVoted)).append(stringboy);
 }
