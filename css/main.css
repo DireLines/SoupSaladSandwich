@@ -43,6 +43,7 @@ div {
 .results .res {
 	position: absolute;
 	top: 130px;
+	width:20%;
 	height: calc(100% - 130px);
 	background-color: rgba(224, 224, 224, 0.8);
 	margin: none;
