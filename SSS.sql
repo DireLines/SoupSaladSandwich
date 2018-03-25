@@ -65,15 +65,15 @@ LOCK TABLES `objects` WRITE;
 
 INSERT INTO `objects` (`object_id`, `path`, `name`, `description`)
 VALUES
-	(1,'/pede/ullamcorper.html','luctus','euismod scelerisque quam turpis adipiscing lorem vitae'),
-	(2,'/nunc/vestibulum/ante/ipsum.png','enim leo rhoncus','egestas metus aenean fermentum donec ut'),
-	(3,'/tempor/convallis.aspx','condimentum','lacus morbi sem mauris laoreet ut rhoncus'),
-	(4,'/quis/odio/consequat/varius/integer/ac/leo.json','ut','lacinia eget tincidunt eget tempus vel pede morbi'),
-	(5,'/elit/proin.html','nec','consequat lectus in est risus auctor sed tristique in tempus'),
-	(6,'/massa.json','sodales scelerisque','nulla mollis molestie lorem quisque'),
-	(7,'/faucibus/orci/luctus/et/ultrices/posuere.aspx','turpis','potenti cras in purus eu magna vulputate luctus cum'),
-	(8,'/pede/justo.html','elementum eu interdum','in imperdiet et commodo vulputate justo in'),
-	(9,'/quisque/ut/erat/curabitur/gravida.html','in faucibus orci','est quam pharetra magna ac consequat metus'),
+	(1,'/img/Breadbowl.jpg','BREAD BOWL','euismod scelerisque quam turpis adipiscing lorem vitae'),
+	(2,'/img/Flatbread\ Sandwich.jpeg','Flatbread Sandwich','egestas metus aenean fermentum donec ut'),
+	(3,'/img/Hard\ Shell\ Sandwich.jpeg','Taco','lacus morbi sem mauris laoreet ut rhoncus'),
+	(4,'/img/Hot\ Dog.jpg','Hot Dog','lacinia eget tincidunt eget tempus vel pede morbi'),
+	(5,'/img/Symmetrical\ Salad.jpg','Fancy Fries','consequat lectus in est risus auctor sed tristique in tempus'),
+	(6,'/img/Burger\ with\ Potato Salad.jpeg','Burger with fries','nulla mollis molestie lorem quisque'),
+	(7,'/img/Gourmet\ Salad.jpg','Just a buncha food','potenti cras in purus eu magna vulputate luctus cum'),
+	(8,'/img/Hard Wrap\ Sandwich.jpeg','eggrolls','in imperdiet et commodo vulputate justo in'),
+	(9,'/img/Ice\ Cream\ Sandwich.jpg','ice cream sandwich','est quam pharetra magna ac consequat metus'),
 	(10,'/bibendum/imperdiet/nullam/orci/pede/venenatis.png','tempor','elit ac nulla sed vel enim sit amet nunc viverra');
 
 /*!40000 ALTER TABLE `objects` ENABLE KEYS */;

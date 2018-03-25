@@ -31,10 +31,10 @@ app.get('/', function(req, res) {
 
 app.get('/getfoods', function(req, res) {
 	connection.query(
-		'SELECT name FROM objects order by RAND() limit 5',
+		'SELECT * FROM objects order by RAND() limit 5',
 		function(err, results, fields) {
 			console.log(results);
-			res.send("{'response':" + JSON.stringify(results) + "}");
+			res.send("{\"response\":" + JSON.stringify(results) + "}");
 		}
 	);
 });

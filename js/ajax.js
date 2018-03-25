@@ -34,7 +34,6 @@ function vote(uniqueid, category) {
 
 function getfoods() {
 	console.log("Called JS getfoods!");
-	var theStuff;
 	var request = new XMLHttpRequest();
 	request.open('GET', '/getfoods');
 	request.onreadystatechange = function() {
@@ -47,6 +46,10 @@ function getfoods() {
 }
 
 function generateHTML(data) {
-	//make background image / text
+	parsedFoods = JSON.parse(data);
+	$('div.food h1').text(parsedFoods.response[0].name);
+	console.log(parsedFoods.response[0].path);
+	$('div.food').css('background-image',parsedFoods.response[0].path);
+	//change image
 	//assign vote functions to buttons
 }
