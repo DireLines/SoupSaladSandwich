@@ -40,7 +40,7 @@ app.get('/getfoods', function(req, res) {
 });
 
 app.post('/vote', function(req, res) {
-	console.log(req.body);
+	// console.log(req.body);
 	var category = req.body.category;
 	var food = req.body.uniqueid;
 	var cookie = 1; // MAKE THIS MAKE SENSE
@@ -49,7 +49,7 @@ app.post('/vote', function(req, res) {
 		'WHERE NOT EXISTS (SELECT * FROM votes WHERE object_id = ? AND user_id = ?)',
 		[food, cookie, category, food, cookie],
 		function(err, results, fields) {
-			console.log(results);
+			// console.log(results);
 		}
 	);
 	res.send('Thanks for voting!');
