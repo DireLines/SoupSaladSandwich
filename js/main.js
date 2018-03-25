@@ -26,7 +26,7 @@ function generateHTML(data) {
 			category = 2;
 		}
 		console.log(foodnum, category);
-		// vote(foodnum,category);
+		 vote(foodnum,category);
 		numVoted++;
 		if(numVoted >= 5){
 			console.log("going to results");

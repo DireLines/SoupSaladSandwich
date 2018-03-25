@@ -50,7 +50,7 @@ app.get('/getfoods', function(req, res) {
 	connection.query(
 		'SELECT * FROM objects order by RAND() limit 5',
 		function(err, results, fields) {
-			console.log(results);
+			//console.log(results);
 			res.send("{\"response\":" + JSON.stringify(results) + "}");
 		}
 	);
@@ -61,40 +61,50 @@ app.post('/vote', function(req, res) {
 	var category = req.body.category;
 	var food = req.body.uniqueid;
 	var cookie = 1; // MAKE THIS MAKE SENSE
+	var q1d = false, q2d = false, q3d = false, q4d = false;
 	connection.query(
 		'INSERT INTO votes (object_id, user_id, category_id) values (?,?,?) ' +
 		'WHERE NOT EXISTS (SELECT * FROM votes WHERE object_id = ? AND user_id = ?)',
 		[food, cookie, category, food, cookie],
 		function(err, results, fields) {
-			// console.log(results);
-		}
-	);
+			q1d = true;
+			console.log("did this");
 	var voteCounts = '{"soupVote":';
 	connection.query(
 		'select count(vote_id) from votes where object_id = ? and category_id = 0',
 		[food],
 		function(err, results, fields) {
-			console.log(results);
-			var x = JSON.parse(results);
-			voteCounts += x.count(vote_id) + ',"saladVote":';
-		}
-	);
+			console.log(results[0]['count(vote_id)']);
+			voteCounts += results[0]['count(vote_id)'] + ',"saladVote":';
+			q2d = true;
+			console.log("did this");
+
 	connection.query(
 		'select count(vote_id) from votes where object_id = ? and category_id = 1',
 		[food],
 		function(err, results, fields) {
-			voteCounts += results.count(vote_id) + ',"sandwichVote":';
-		}
-	);
+			voteCounts += results[0]['count(vote_id)'] + ',"sandwichVote":';
+			q3d = true;
+			console.log("did this");
+
 	connection.query(
 		'select count(vote_id) from votes where object_id = ? and category_id = 2',
 		[food],
 		function(err, results, fields) {
-			voteCounts += results.count(vote_id) + '}';
+			voteCounts += results[0]['count(vote_id)'] + '}';
+			q4d = true;
+			console.log("did this");
+			console.log(voteCounts);
+			res.send(voteCounts);
 		}
 	);
-	console.log(voteCounts);
 	//res.send('Thanks for voting!');
+}
+);
+}
+);
+}
+);
 });
 
 app.post('/test', function(req, res) {
