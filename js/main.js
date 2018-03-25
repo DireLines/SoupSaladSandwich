@@ -46,5 +46,5 @@ function goToResults(){
 
 function changeResultHTML(data){
 	parsedVotes = JSON.parse(data);
-	$('#r' +(numVoted)).innerHTML = ("Soup: " + parsedVotes.soupVote + "\n" + "Salad: " + parsedVotes.saladVote + "\n" + "Sandwich: " + parsedVotes.sandwichVote + "\n");
+	$('#r' +(numVoted)).text("Soup: " + parsedVotes.soupVote + "\n" + "Salad: " + parsedVotes.saladVote + "\n" + "Sandwich: " + parsedVotes.sandwichVote + "\n");
 }
