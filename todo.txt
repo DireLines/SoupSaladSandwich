@@ -1,0 +1,29 @@
+Todo:
+
+-Get SQL working for existing foods
+
+-Play Again button
+
+-function to clear database completely (only usable by privileged users) so we can test with blank slate
+ and remove test votes before deployment (no initial bias)
+
+-submit own foods feature
+    -submit button
+    -report button to filter out garbage/pornography
+
+-ask prof or consultant about security
+
+-replace Unity project with this on soupsaladsandwich.org
+-spread the word
+
+Howto:
+
+Test webpage before deployment:
+    cd to this directory
+    make sure no process is listening on port 80 (localhost)
+        if there is, kill it or quit that server
+    sudo node index.js
+    enter password
+    open browser, go to "localhost"
+    the website should be there
+    do ^C in terminal to stop listening on localhost
